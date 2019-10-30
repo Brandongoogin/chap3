@@ -2,6 +2,14 @@ package com.company;
 
 public class Main {
 
+    public double totalWages(double hours, double rate)
+    {
+        double wages;
+        
+    }
+
+
+
     public static void main(String[] args) {
         double wages = totalWages(45, 12.5);
         System.out.println("Wages for 45 hours at $12.50 " + wages);
