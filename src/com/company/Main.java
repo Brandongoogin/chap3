@@ -17,14 +17,16 @@ public class Main {
 
         return wages;
     }
-    public static boolean isLeapYear(int year){
-        if((year%4 == 0) && (year%100 != 0) || (year%400 == 0)) {
+    public static boolean isLeapYear(int year) {
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
             return true;
-        }
-        else {
+        } else {
             return false;
-        }public static boolean isLater(int month1, int day1, int year1, int month2, int day2, int year2) {
-            
+        }
+        public static boolean isLater ( int month1, int day1, int year1, int month2, int day2, int year2){
+            if
+
+        }
     }
 
 
