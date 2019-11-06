@@ -19,13 +19,19 @@ public class Main {
     public static boolean isLeapYear(int year) {
         if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
             return true;
-        } else {
+        }
+        else {
             return false;
         }
     }
-       // public static boolean isLater( int month1, int day1, int year1, int month2, int day2, int year2){
-           // if
-
+        public static boolean isLater( int month1, int day1, int year1, int month2, int day2, int year2) {
+            if (year1 > year2 || year1 == year2 && month1 > month2 || year1 == year2 && month1 == month2 && day1 > day2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
 
 
 
@@ -43,13 +49,13 @@ public class Main {
 
 
       //is later
-      //  System.out.println("1/2/2010 is later than 1/2/2011 " + isLater(1,2,2010, 1,2,2011));
-     //   System.out.println("1/2/2011 is later than 1/2/2010 " + isLater(1,2,2011, 1,2,2010));
-     //   System.out.println("1/2/2010 is later than 3/2/2010 " + isLater(1,2,2010, 3,2,2010));
-     //   System.out.println("3/2/2010 is later than 1/2/2010 " + isLater(3,2,2010, 1,2,2010));
-     //   System.out.println("1/3/2010 is later than 1/2/2010 " + isLater(1,3,2010, 1,2,2010));
-     //   System.out.println("1/2/2010 is later than 1/3/2011 " + isLater(1,2,2010, 1,3,2010));
-     //   System.out.println("1/2/2010 is later than 1/2/2010 " + isLater(1,2,2010, 1,2,2010));
+        System.out.println("1/2/2010 is later than 1/2/2011 " + isLater(1,2,2010, 1,2,2011));
+        System.out.println("1/2/2011 is later than 1/2/2010 " + isLater(1,2,2011, 1,2,2010));
+        System.out.println("1/2/2010 is later than 3/2/2010 " + isLater(1,2,2010, 3,2,2010));
+        System.out.println("3/2/2010 is later than 1/2/2010 " + isLater(3,2,2010, 1,2,2010));
+        System.out.println("1/3/2010 is later than 1/2/2010 " + isLater(1,3,2010, 1,2,2010));
+        System.out.println("1/2/2010 is later than 1/3/2011 " + isLater(1,2,2010, 1,3,2010));
+        System.out.println("1/2/2010 is later than 1/2/2010 " + isLater(1,2,2010, 1,2,2010));
 
 // Best match
     //    System.out.println("Best match 2 3 4 " + bestMatch(2,3,4));
