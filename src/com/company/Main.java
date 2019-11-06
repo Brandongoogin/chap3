@@ -31,7 +31,32 @@ public class Main {
                 return false;
             }
         }
-        
+        public static Color bestMatch(int r, int g, int b) {
+            if (r > g && r > b) {
+                return Color.RED;
+            } else if (g > r && g > b) {
+                return Color.GREEN;
+            } else if (b > g && b > r) {
+                return Color.BLUE;
+            } else if (r == g && r == b) {
+                return Color.GRAY;
+            }
+            else if (r == g && r > b) {
+                return Color.YELLOW;
+            }
+            else if (r == b && r > g) {
+                return Color.MAGENTA;
+            }
+            else if (g == b && g > r) {
+                return Color.CYAN;
+            }
+    }
+    public static int findBestFit( int size1, int size2, int space) {
+        if (size1 + size2 <= space || size1 >size2 && size1 <= space || size2 > size1 && size2 <= space ) {
+
+        }
+    }
+
 
 
 
@@ -58,21 +83,21 @@ public class Main {
         System.out.println("1/2/2010 is later than 1/2/2010 " + isLater(1,2,2010, 1,2,2010));
 
 // Best match
-    //    System.out.println("Best match 2 3 4 " + bestMatch(2,3,4));
-    //    System.out.println("Best match 4 3 3 " + bestMatch(4,3,3));
-   //     System.out.println("Best match 3 8 4 " + bestMatch(3,8,4));
-   //     System.out.println("Best match 4 3 4 " + bestMatch(4,3,4));
-   //     System.out.println("Best match 2 4 4 " + bestMatch(2,4,4));
-   //     System.out.println("Best match 8 8 4 " + bestMatch(8,8,4));
-   //     System.out.println("Best match 4 4 4 " + bestMatch(4,4,4));
+        System.out.println("Best match 2 3 4 " + bestMatch(2,3,4));
+        System.out.println("Best match 4 3 3 " + bestMatch(4,3,3));
+        System.out.println("Best match 3 8 4 " + bestMatch(3,8,4));
+        System.out.println("Best match 4 3 4 " + bestMatch(4,3,4));
+        System.out.println("Best match 2 4 4 " + bestMatch(2,4,4));
+        System.out.println("Best match 8 8 4 " + bestMatch(8,8,4));
+        System.out.println("Best match 4 4 4 " + bestMatch(4,4,4));
 
 // Best Fit
-     //   System.out.println("Find Best fit 2 3 6 is " + findBestFit(2,3,6));
-    //    System.out.println("Find Best fit 4 3 6 is " + findBestFit(4,3,6));
-    //    System.out.println("Find Best fit 3 4 6 is " + findBestFit(3,4,6));
-     //   System.out.println("Find Best fit 2 3 1 is " + findBestFit(2,3,1));
-      //  System.out.println("Find Best fit 6 3 4 is " + findBestFit(6,3,4));
-      //  System.out.println("Find Best fit 3 6 4 is " + findBestFit(3,6,4));
+        System.out.println("Find Best fit 2 3 6 is " + findBestFit(2,3,6));
+        System.out.println("Find Best fit 4 3 6 is " + findBestFit(4,3,6));
+        System.out.println("Find Best fit 3 4 6 is " + findBestFit(3,4,6));
+        System.out.println("Find Best fit 2 3 1 is " + findBestFit(2,3,1));
+        System.out.println("Find Best fit 6 3 4 is " + findBestFit(6,3,4));
+        System.out.println("Find Best fit 3 6 4 is " + findBestFit(3,6,4));
 
     }
 }
