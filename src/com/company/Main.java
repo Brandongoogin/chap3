@@ -50,11 +50,19 @@ public class Main {
             else if (g == b && g > r) {
                 return Color.CYAN;
             }
+            return null;
     }
     public static int findBestFit( int size1, int size2, int space) {
-        if (size1 + size2 <= space || size1 >size2 && size1 <= space || size2 > size1 && size2 <= space ) {
-
+        if (size1 + size2 <= space) {
+            return 3;
         }
+        if (size1 >= size2 && size1 < space || size1 < size2 && size2 > space) {
+            return 1;
+        }
+        if (size2 >= size1 && size2 < space || size1 > size2 && size1 > space) {
+            return 2;
+        }
+        return 0;
     }
 
 
